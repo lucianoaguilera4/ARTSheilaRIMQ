@@ -1,0 +1,343 @@
+%\documentclass[preprint,12pt]{Template_RMIQ_V1}
+\documentclass[10pt]{book}
+\usepackage[english]{babel}
+%\language=0 % esto pone las secciones en español
+%  \hyphenpenalty=5000
+%  \tolerance=1000
+ \hyphenpenalty=50000
+  \tolerance=1000
+\usepackage{booktabs} % para mejorar las tablas
+\usepackage{rotating}
+\usepackage[latin1]{inputenc} % esto es para los acentos y la ñ
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{fullpage}
+\usepackage{pxfonts}
+\usepackage{txfonts}
+\usepackage{graphicx}
+\usepackage{hyperref} %hipervinculos en el pdf
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={My title},    % title
+    pdfauthor={Author},     % author
+    pdfsubject={Subject},   % subject of the document
+    pdfcreator={Creator},   % creator of the document
+    pdfproducer={Producer}, % producer of the document
+    pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=black,          % color of internal links    
+	 citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=cyan           % color of external links
+}
+\usepackage{multicol}
+\usepackage[round]{natbib}
+\usepackage{lineno}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage[version=3]{mhchem}
+\setlength{\columnsep}{1cm}
+\usepackage{color}
+\definecolor{green_rmiq}{RGB}{0,128,128}
+\textwidth = 16.2cm
+\setcounter{page}{1} % asi se cambia el número de página
+\renewcommand{\headrulewidth}{0pt}
+\rhead{}
+\lhead{}
+\lfoot{}
+\fancyfoot{}
+
+%\cfoot{\it www.amidiq.org}
+\fancyfoot[LE,RO]{\thepage}
+\long\def\symbolfootnote[#1]#2{\begingroup%
+\def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup} 
+
+% estilo de tabla
+\usepackage{xtab} % SHEILA
+\usepackage{longtable} % SHEILA
+%\usepackage{supertabular}
+\usepackage{booktabs}
+% Mejora la apariencia de las líneas en el ambiente "tabular"
+%\usepackage{multicolumn}
+\usepackage{multirow}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+\begin{document}
+%\chead{ \vspace{-1.5cm}\includegraphics[width=\textwidth]{head}}
+%\cfoot{Publicado por la Academia Mexicana de Investigación y Docencia en Ingeniería Química A.C.}
+%\renewcommand{\thesection}{\arabic{section}}
+%\renewcommand{\thesubsection}{{\it \arabic{section}.\arabic{subsection}}}
+%\renewcommand{\figurename}{Fig.}
+%\linenumbers
+\chead{ \hspace{-2.25cm}
+\hspace{1.5cm}    \includegraphics[width=0.8\textwidth]{banner}
+\\
+\vspace{2.5cm} 
+}
+\cfoot{\it Manuscrito sometido a la  Revista Mexicana de {\color{green_rmiq}I}ngeniería {\color{green_rmiq}Q}uímica}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{{\it \arabic{section}.\arabic{subsection}}}
+\renewcommand{\figurename}{Fig.}
+\linenumbers
+% \vspace{-4cm}\includegraphics[width=\textwidth]{head}
+{\Large\hspace{4cm}  \vspace{.5cm} % \hspace{4cm} 
+}
+
+\hrule width \textwidth height 2pt \smallskip
+
+\begin{center}
+	
+{\large \bf  \MakeUppercase{Análisis y comparación de las diferentes técnicas de obtención del biodiésel por el método de transesterificación}}
+\vspace{0.3cm} \\
+{\large \bf  \MakeUppercase{Analysis and comparation of the diferent techniques of procurement biodiesel by the transesterification method} }\\
+
+\vspace{.25cm}
+
+% {Pérez-Bravo Sheila Genoveva$^{1,2}\symbolfootnote[1]{{\it Autor para la correspondencia. E-mail}:  \texttt{sheila_gen@hotmail.com} \\{\it Tel. 833-157-45-55 }} $}, Aguilera Vázquez Luciano$^1$ y  Guzmán Palomino Abraham $^3$ 
+ 
+{S.G. Pérez Bravo$^{1}\symbolfootnote[1]{{\it Autor para la
+            correspondencia. E-mail}:
+        \texttt{sheila\_gen@hotmail.com} \\{\it
+            Tel. 833-157-45-55}}$}, L. Aguilera Vázquez$^1$
+        M.R. Castañeda Chávez $^2$ y  Guzmán Palomino $^1$ 
+
+\vspace{0.25cm}
+
+$^1${\it Instituto Tecnológico de Ciudad Madero. Av. Primero de Mayo
+    1610, Col. Los Mangos, C.P 89460, Cd. Madero, Tams.} \\
+$^2${\it Instituto Tecnológico de Boca del Río. Carr. Veracruz -
+    Córdoba Km 12, C.P. 94290, Boca del Río, Ver.}
+
+\vspace{0.25cm}
+%Sent X of XXXX, 2010
+{\it Fecha de envío}: día, mes, año
+%\vspace{0.25cm}
+\smallskip
+\hrule width \textwidth height 2pt %\smallskip
+\end{center}
+
+\noindent
+{\bf Resumen}
+%\vspace{.25cm}
+
+\noindent
+{{\it El biodiésel es un biocombustible líquido que se obtiene a partir de lípidos naturales como aceites vegetales o grasas animales, sus propiedades lo hacen idóneo como combustible en motores de ciclo Diesel convencionales o adaptados, su combustión ayuda a reducir los factores exógenos que contribuyen a la contaminación, los procesos de transformación a bioenergía son la transesterificación o alcoholisis, con catálisis ácida, básica o enzimática, en distintas condiciones de presión, temperatura, y relaciones molares o volumétricas, la materia prima influye en el rendimiento y las propiedades finales del biocombustible. Esta investigación tiene el objetivo de analizar y comparar distintas técnicas de producción de biodiésel, así como los rendimientos de conversión y aspectos relevantes de los procesos. Este estado del arte del proceso de transesterificación resume los avances alcanzados en diversas investigaciones, para que cada uno de los interesados en el tema, determinen una técnica adecuada para una producción sustentable y económica del biodiésel.}
+
+\vspace{.2cm}
+
+\noindent
+{\it Palabras clave}: biodiésel, transesterificación, comparativa, catálisis, condiciones de operación.
+
+\smallskip
+\hrule width \textwidth height 1pt \smallskip
+
+
+%\vspace{.20cm}
+\noindent
+{\bf Abstract}
+
+%\vspace{.25cm}
+\noindent
+{{\it Biodiesel  is  a  liquid  biofuel  that  is  obtained  from  natural lipids  such as  vegetable oils  or  animal fats,  its properties make it  ideal  as a fuel in conventional or adapted Diesel cycle engines, its combustion helps reduce the exogenous factors that cause  the contamination, the transformation processes of bioenergy for transesterification or alcoholysis, with acid, basic or enzymatic catalysis, under conditions of pressure, temperature, and molar or volumetric ratios, to raw material influences the performance and final properties of biofuel. This research has the objective of analyzing and comparing different production techniques of biodiesel, as well as the conversion yields and the relevant aspects of the processes. This state of art, sinthesys the transesterification, process summarizes the progress made in the research, for those interested in the subject, for a sustainable and economic production of biodiesel.
+}
+
+\vspace{.2cm}
+\noindent
+{\it Keywords}: biodiesel, comparative, transesterification, catalysis, operating conditions.
+
+\smallskip
+\hrule width \textwidth height 1pt \smallskip
+
+\vfill
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%En la página 2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chead{\vspace{-1.5cm} {\it Pérez Bravo y col.} \\ \vspace{0.5 cm}}
+%\cfoot{\it www.rmiq.org}
+\section{Introducción}
+
+En la última década se ha hecho evidente la necesidad de sustituir los
+combustibles fósiles de consumo actual, por otros renovables de origen
+biológico, que sean sustitutos viables por requerir una mínima
+adaptación tecnológica del parque vehicular existente y con un menor
+impacto al medio ambiente.
+
+La American Society for Testing and Materials (ASTM) define al
+biodiésel como un combustible formado por monoalquilésteres de ácidos
+grasos de cadena larga derivados de aceites vegetales y grasas
+animales (Zuleta y cols., 2008; Loera-Quezada y cols.,
+2010)\nocite{Zuleta2008,Loera-quezada2010}, el estándar EU 14214 de la
+unión europea acepta esta definición \cite{Loera-quezada2010}. Puede
+utilizarse puro (B100) o en mezclas con diésel.  Entre las ventajas
+que presenta el biodiésel contra el diésel se encuentran la seguridad
+en el transporte y distribución, su punto de ignición es mayor a
+$148.8^oC$, y el del diésel de $51.6^oC$, no requiere un almacenaje
+especializado, en caso de derrame la contaminación es inferior a la
+del diésel ya que su degradación se realiza en menor tiempo.  Las
+emisiones de su combustión emiten significativamente menores
+partículas en suspensión, las mezclas B20 (20\% biodiésel-80 \%diésel)
+demuestran un 23\% menos en partículas suspendidas, las emisiones de
+dióxido de carbono e hidrocarburos no quemados son del orden del 73\%
+inferiores, al igual que las reducciones de compuestos sulfurados y
+aromáticos \cite{Berrios2008}. Su naturaleza de combustible con una
+mayor proporción de oxígeno en su estructura química permite una
+combustión más completa ya que contiene un 11\% en peso de oxígeno y
+es 100\% libre de azufre. Entre las desventajas que se presentan
+encontramos la degradación de gomas y materiales poliméricos a
+concentraciones superiores del 20\% además de un poder calorífico
+inferior al diésel convencional siendo de 7.795 kcal/L contra 8.74
+kcal/L del diésel
+\cite{CARO-BECERRAJuanLuisCASTELLANOS-RANGELLibierROMERO-GONZALEZFernandoRUIZ-MORALES2017}.
+Sus propiedades fisicoquímicas finales dependen de la materia prima,
+antes de reemplazar 100\% al diésel se deben mejorar algunas de ellas,
+es un biocombustible de alta viscosidad, baja volatilidad, con
+tendencia a la oxidación
+\cite{Canakci2001,M.G.Aca-AcaE.CamposGonzalez2009}, el uso de aceites
+vegetales usados es una alternativa a la reducción de factores
+exógenos contaminantes, para que el biodiésel llegue a sustituir al
+diésel, su proceso de obtención debe tener balances energéticos
+positivos, un costo accesible y competitivo en el mercado.  En Estados
+Unidos de América el biodiésel se comercializa en
+$0.5 USD/L contra $0.35 USD/L del diésel, el costo elevado se atribuye
+a la utilización de aceites vegetales vírgenes para su producción
+\cite{Talukder2009}, la utilización de aceites vegetales usados en la
+producción de biodiésel permitiría la valorización de este residuo,
+evitaría la contaminación que su desecho genera, y evitaría que
+retornaran a la cadena alimenticia \cite{Sharma2009}, su coste nulo
+podría disminuir el costo final del biodiésel, afirmar esto no es
+posible sin hacer una planeación y evaluación económica del acopio de
+los aceites vegetales usados.  Los aprovechamientos de las energías
+renovables son de gran interés actualmente, el biodiésel es idóneo
+para una transición energética en vehículos automotores, sus ventajas
+medio ambientales y sociales han impulsado su desarrollo, se necesita
+resolver la factibilidad económica para así poder realizar una
+producción a gran escala. Países como Estados Unidos de América,
+Brasil, Francia, Alemania y Argentina son los pioneros y principales
+productores de biodiésel, los incentivos gubernamentales son
+necesarios para el incremento de la producción y consumo
+\cite{Bozbas2008}.  Para obtener biodiésel se requieren de las
+materias primas: triglicéridos y un alcohol de cadena corta así como
+un catalizador que acelere la reacción, en esta investigación se
+resumen las principales fuentes de triglicéridos y alcoholes
+preferidos para síntesis de biodiésel, los tipos de catálisis así como
+la influencia que han tenido en el rendimiento de conversión.
+
+\section{Antecedentes}
+
+Un biocombustible es aquel obtenido de la biomasa, es decir, de materia orgánica vegetal, la cual tiene un origen solar indirecto, los hidratos de carbono se forman en el proceso de fotosíntesis, al absorber el dióxido de carbono y agua, debido a esto las emisiones de la combustión de los biocombustibles tiene un balance nulo respecto al dióxido de carbono.
+El biodiésel es químicamente un éster mono alquílico de ácido graso de cadena larga, uno de los procesos de obtención es la transesterificación, que consiste en combinar un aceite vegetal con un alcohol, obteniendo el biodiésel y el residuo de valor añadido glicerina \cite{Canakci2001,Berrios2008}. Los componentes principales de los aceites vegetales son los triglicéridos o bien ésteres de glicerol unidos a ácidos de cadena larga capaces de reaccionar con diversos alcoholes tales como: metanol, etanol, propanol y butanol, debido a la naturaleza reversible de esta reacción, es recomendable emplear exceso de alcohol para favorecer el equilibrio hacia la formación de biodiésel. En la Figura \ref{fig:rxtrans} se presenta la reacción química del proceso de transesterificación, en donde $R'$ es el radical alquilo correspondiente al alcohol empleado en el proceso, $R$ significa "organic rest" son moléculas que deben definirse, se presentan mezclas variadas de triglicéridos en los aceites vegetales, los ácidos grasos más comunes son: palmitoleico, esteárico, oleico, linoleico y linolenico, la composición depende de la fuente vegetal \cite{Klabusay2008}. En la Figura \ref{fig:ag} se presenta la formula química de los principales ácidos grasos más comunes en los aceites vegetales.
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[scale=0.45]{rxtrans.png}	
+		\caption[Reacción de transesterificación]{Reacción de transesterificación; $R'$=Radical alquilo \cite{Klabusay2008}.}
+		\label{fig:rxtrans}
+	\end{center}
+\end{figure}
+\begin{figure}
+	\begin{center}
+		\includegraphics[scale=0.5]{ag.jpg}
+		\caption[Nomenclatura de ácidos grasos]{Nomenclatura de ácidos grasos presentes en aceites vegetales \cite{Klabusay2008}.}
+		\label{fig:ag}
+	\end{center}
+\end{figure}
+
+Previo a la utilización de biodiésel en los vehículos automotores deben evaluarse las propiedades fisicoquímicas para la prevención de daños en los motores, generalmente los ésteres metílicos puros tienen un punto de inflamación superior a los $200^oC$ siendo no inflamables, la naturaleza de su proceso de obtención y purificación impide la eliminación total del alcohol utilizado, las trazas de alcohol influyen en el punto de inflamación del biocombustible, la ASTM marca como estándar de calidad los $130^oC$ mínimo, un punto inferior a este valor indicaría mayor concentración de alcohol, implicando un riesgo de corrosión de las partes metálicas y degradación de los elastómeros y sellos del motor, por otro lado la viscosidad cinemática (viscosidad dinámica/densidad) es la resistencia al flujo de un fluido por gravedad, un valor elevado indica la presencia de glicéridos sin reaccionar, catalizador y glicerinas remanentes en el biodiésel ocasionando problemas en los inyectores y sistema de bombeo acortando la vida útil del motor. El contenido de sulfuros en la materia prima es casi nulo, en ocasiones los catalizadores o procesos de neutralización influyen en el contenido total de sulfuros, el cual debe ser mínimo para evitar corrosión y emisiones de $SOx$. El número de cetano es una medida del rendimiento de encendido de un combustible, para el diésel es de 49-51 min, los ésteres de ácidos grasos (B100) comúnmente tienen números de cetano cercanos o superiores a 47 min, lo que los hace apropiados para sustituir al diésel. Por otra parte el punto de nube es un factor critico climas fríos ya que es la temperatura a  cual comienzan a aparecer los primeros cristales de cera en el biocombustible, es decir a solidificarse, los esteres etílicos saturados son los primeros en solidificar, este parámetro debe ser reportado en grados centigrados, dependerá del clima de la zona geográfica de uso del biodiésel la necesidad de sistemas de calefacción en el motor del vehículo automotor \cite{Klabusay2008}. Por ejemplo, para biodiésel producido a partir de AVU (Aceite Vegetal Usado) se reporto un punto de nube de $4^oC$ y $28^oC$ a partir de aceite crudo de palma \cite{Caballero2012}.
+
+\input{RMIQ-Tabla01}
+
+Para la cuantificación de metilésteres y triglicéridos se puede utilizar el método de GPC (Cromatografía de Permeación en Gel), DIR (Detector de Índice de Refracción) \cite{Barajas2011} o bien cromatografía de gases con detector de ionización de flama \cite{Martinez-HernandezMarisolSuastes-AcostaSandraL.Lozano-ramirezCruz2018}.
+
+\section{Metodología}
+
+Se realizo una investigación exhaustiva de las investigaciones reportadas respecto al tema de producción de biodiésel mediante el proceso de transesterificación con la finalidad de resumir los avances alcanzados, analizar y comparar las materias primas utilizadas así como las variables de operación que intervienen en el proceso.
+Materias primas. Deben contener un alto porcentaje de triglicéridos para ser utilizables en el proceso de producción, se utilizan los aceites vegetales convencionales de: palma, soja, coco, colza y girasol, los alternativos de: Cynara Curduculus, Brassica Carinata, Camelina Sativa, Crambe Abyssinica, Jatropha Curcas, Ricino, Pogianus, aceites de la semilla modificada girasol alto oleico, grasas animales, aceites vegetales usados, y aceites de microalgas. Los alcoholes utilizados pueden ser metanol, etanol, propanol y butanol, estos impactan en el peso molecular final del biodiésel. La materia prima representa del 75-88\% del costo total de producción \cite{RiveraIvannaVillanuevaGerardo2009}.
+Pretratamientos: Dependerá de las características de la materia prima, por ejemplo: el desgomado sirve para la eliminación de fosfolípidos, la neutralización para la eliminación de ácidos grasos libres, la esterificación ácida para la formación de esteres cuando los ácidos grasos libres supera el 5\%, la winterización es la eliminación de estearinas en frío, ceras o esteroles, y con el lavado se retiran los restos de la neutralización, el secado es vital para la deshidratación de la materia prima, puede realizarse en un evaporador al vacío \cite{MedinaRamirezE.2012}. La esterificación se realiza en presencia de catalizadores ácidos como el ácido sulfúrico y el ácido p-toluenosulfonico \cite{Liu2013}.
+Catálisis. Un catalizador es aquel agente retardante o acelerante de una reacción química, en el caso de la reacción de transesterificación se busca acelerar la cinética de reacción, de acuerdo con la fase pueden ser homogéneos o heterogéneos, se utilizan ácidos, bases o enzimas. Los catalizadores básicos KOH o NaOH, se disuelven previamente en el alcohol formando un alcóxido, esta fase se llama activación del catalizador, estos son usualmente preferidos a nivel industrial ya que permiten operar en condiciones moderadas de presión y temperatura, alcanzan eficiencias de conversión superiores al 90\%, sin embargo, al ser una catálisis homogénea con compuestos corrosivos, la etapa de purificación del biodiésel se torna necesaria y compleja. 
+El uso de un catalizador heterogéneo evitaría la etapa de lavado del biodiésel, reduciendo el costo ambiental y económico, los más utilizados son los hidróxidos metálicos de Calcio y Bario, óxidos metálicos, zeolitas e hidrocalcitas \cite{MedinaRamirezE.2012}. Su utilización no ocasiona la formación de jabones, por lo tanto no se necesita una etapa de lavado, evitando la generación de aguas residuales, y facilitan la separación, otra ventaja que presentan son la reutilización \cite{Hangun-Balkir2016}.
+La catálisis ácida se realiza también en fase homogénea, presenta menor eficiencia de conversión, su operación a mayor presión y elevada temperatura no la hacen idónea a nivel industrial, es una opción para convertir la materia rica en ácidos grasos libres como las grasas animales o aceites vegetales usados, realizando un paso previo de esterificación, este tipo de catálisis elimina el riesgo de saponificación de las grasas.
+Una reciente investigación propone el uso de líquidos ionicos IL, de Ácidos de Bronstead, específicamente el 1?(3?sulfonic acid) propyl?3?methylimidazole hydrosulfate?[HO3S-pmim]HSO4, como catalizador en el proceso de transesterificación, dicho catalizador es un solvente inflamable, estable térmicamente, que puede ser reutilizado con ligera desactivación \cite{Liu2013}.
+Agitación: A nivel laboratorio, la agitación magnética es la más comúnmente empleada. No se puede especificar una velocidad óptima de agitación para la reacción, ya que mientras algunos autores reportan velocidades óptimas de 300 rpm, otros señalan que se logran mejores resultados a velocidades de 1,100 rpm \cite{Sharma2009}. A nivel planta piloto, la agitación mecánica se usa con mayor frecuencia, es notorio que la agitación incrementa la transferencia de masa, colisionando las moléculas e incrementando la conversión.
+Condiciones de operación: se definen como condiciones de operación las variables temperatura, presión, tiempo de reacción y velocidad de agitación, en las investigaciones se concuerda con el efecto de la temperatura sobre el rendimiento, en los reactores cerrados se forma una autopresión debida a la evaporación del alcohol, fenómeno que se reporta como presión autogenerada, en algunos casos es medida y reportada, en la mayoría de los experimentos se utilizan reactores abiertos.
+Purificación: los métodos utilizados son evaporación del exceso de metanol por vacío y lavado con agua destilada o bien acidulada con ácido fosfórico o cítrico, neutralizando los catalizadores básicos presentes, aplicando nuevamente calor y vacío para la eliminación de la humedad. La resina Amberlite BD10 es una resina de intercambio protónico para purificar en un paso el biodiésel y que el producto cumpla con los estándares internacionales ASTM D-6751-06 y EN-14212, por cada kilo de resina se pueden purificar de 900 ? 1,600 kg de biodiésel, operando a temperatura ambiente \cite{MedinaRamirezE.2012}.
+\section{Resultados y Discusión}
+
+En la Tabla \ref{tbl:comptrans} se muestran las variables investigadas en los procesos de transesterificación, así como los rendimientos obtenidos, los cuales se evaluaron considerando la Ec. \ref{eq:rendtrans}
+
+\begin{equation}
+\textrm{rendimiento} = \dfrac{\textrm{masa de biodiésel}}{\textrm{masa de aceite}}*100 
+\label{eq:rendtrans}
+\end{equation}
+
+\input{RMIQ-Tabla02}
+
+%Inv. Investigadores\\
+%MP. Materia Prima\\
+%RM. Relación Molar\\
+%Temp. Temperatura\\
+%Obs. Observaciones\\
+%Rend. Rendimiento\\
+
+\clearpage
+
+\section{Conclusiones}
+El proceso de transesterificación para convertir los triglicéridos en el biocombustible biodiésel, puede ser realizado con aceites vegetales nuevos y usados, así como grasas animales residuales, es preferible usar aceites que no compitan con el sector alimenticio para garantizar la seguridad alimentaria y no ocasionar un alza de precios en alimentos, tales como los aceites de palma, algodón y jatropha curcas, el AVU es una excelente alternativa, muestra viabilidad técnica, y la ventaja de un costo inferior. El proceso de transesterificación también se conoce como alcoholisis por el requerimiento de un alcohol como materia prima, se observa la preferencia por el metanol generando FAME, como segunda opción el etanol generando FAEE, la relación molar mínima es 3:1, alcohol:aceite estequiométricamente, en las diferentes investigaciones analizadas se coincide en el efecto del exceso de alcohol sobre la reacción, un exceso de alcohol favorece la cinética de la reacción en favor de los productos, la relación óptima dependerá del aceite o grasa utilizados, así como la catálisis, se observa como media el uso de una relación molar 6:1.
+La catálisis homogénea alcalina se realiza con KOH y NaOH, y es efectiva con cualquier materia prima, se observa que el 1\% en peso del catalizador conlleva a rendimientos superiores del 90\%, una relación inferior disminuye los rendimientos de conversión, estos catalizadores alcalinos se utilizan en fase homogénea, es necesaria una recuperación del exceso de alcohol y una etapa de purificación para la eliminación de jabones.
+La candida antárctica o enzima N435, y candida rugosa son los catalizadores enzimáticos utilizados en el proceso de transesterificación, en distintas condiciones de operación, reportan rendimientos desde el 62-97\%.
+La catálisis heterogénea presenta la ventaja de la facilidad de separación, la nula necesidad de la etapa de purificación, lo que disminuye a huella ecológica del proceso, entre los catalizadores heterogéneos se encuentran el CaO, cascaras calcinadas de huevo y langosta, presentando rendimientos superiores al 90\%, otros como el ZnO presentan un rendimiento inferior al 40\%, la zirconia dopada con cerio y titanio mejoran los rendimientos de conversión, alrededor del 93-98\%.
+La temperatura de operación es un factor importante en el proceso, se coincide en que no debe superar la temperatura de evaporación del alcohol utilizado, y la agitación es necesaria para la transferencia de masa.
+La técnica óptima dependerá de los recursos disponibles para la realización del proceso, en este estado del arte se aprecia la factibilidad técnica de la producción de biodiésel, con diversas materias primas y catalizadores, es imperante el estudio de la factibilidad económica del proceso de producción de biodiésel para impulsar la economía de los bioenergéticos.
+
+\section*{Nomenclatura}
+\noindent\begin{tabular}{lp{0.7\columnwidth}}
+	A & área de la partícula por unidad de volumen,~m$^2$ L$^{-1}$ \\
+	CH$_{4acumulado}$ & volumen de metano acumulado durante la digestión, mL \\
+	$F$ & factor de corrección, 350 mLCH$_4$ g$^{-1}$DQO \\
+	$k_h$ & constante máxima de velocidad de hidrólisis, g DQO L$^{-1}$ d$^{-1}$ \\
+	K$_{SBK}$ & constante de hidrólisis basada en la superficie, g m$^{-2}$ d$^{-1}$ \\
+	K$_X$ & constante de saturación, g DQO L$^{-1}$ \\
+	R$_o$ & diámetro inicial de los SS de tamaño $j$, m \\
+	SD & concentración de sólidos disueltos, g DQO L$^{-1}$ \\
+	SDp & concentración de sólidos disueltos pretratados, g DQO L$^{-1}$ \\
+	SS & concentración de sólidos suspendidos, g L$^{-1}$ \\
+	SS$_o$ & masa inicial de sólidos suspendidos, g L$^{-1}$ \\
+	SS$_t$ & masa de sólidos suspendidos al tiempo $t$, g L$^{-1}$ \\
+	SS$_o^ j$ & sólidos suspendidos de tamaño $j$ en los SS$_o$, g L$^{-1}$ \\
+	SSp & concentración de sólidos suspendidos pretratados, g L$^{-1}$ \\  
+	$t$ & tiempo, d \\
+	V & velocidad de hidrólisis, g DQO L$^{-1}$ d$^{-1}$ \\
+\end{tabular}
+
+\noindent {\it Símbolos griegos}
+
+\noindent\begin{tabular}{lp{0.85\columnwidth}}
+	$\Delta t$ & intervalo de tiempo de la digestión, d \\
+	$\rho$ & densidad de los lodos, kg L$^{-1}$ \\
+	$\eta$ & eficiencia de la hidrólisis 
+\end{tabular}
+
+\section*{Agradecimientos}
+El primer autor agradece el apoyo al Consejo Nacional de Ciencia y Tecnología (CONACYT) por la beca otorgada para cursar el doctorado en ciencias de la ingeniería dentro del programa de doctorado de el Instituto Tecnológico de Ciudad Madero, incluido en el padrón de Postgrados de Excelencia, con el convenio 
+
+
+\bibliographystyle{apalike}
+%\setlength{\parskip}{0pt}
+%\linespread{0.5}\selectfont
+%\renewcommand{\baselinestretch}{0.2}
+\bibliography{library}
+
+
+\end{document}
